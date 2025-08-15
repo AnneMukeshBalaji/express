@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'JetBrains Mono';
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Hello, <%= user.name %>!</h1>
+  <p>Your role: <strong>
+      <%= user.role %>
+    </strong></p>
+
+  <h3>Your Skills:</h3>
+  <ul>
+    <% user.skills.forEach(skill=> { %>
+      <li>
+        <%= skill %>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>
