@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title User Form
+  body
+    h1 Submit Your Details
+    form(action="/submit" method="POST" enctype="multipart/form-data")
+      div
+        label Name:
+        input(type="text" name="name" required)
+      div
+        label Email:
+        input(type="email" name="email" required)
+      button(type="submit") Submit
